@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Sencha House — Sedang Dalam Perbaikan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FDFBF0;
+            --sage: #9CAF88;
+            --sage-dark: #7A9168;
+            --ink: #1a1a1a;
+            --muted: #5c5348;
+            --card: #ffffff;
+            --border: #e8ebe0;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .brand {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 26rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 2.25rem 1.75rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(122, 145, 104, 0.12);
+        }
+
+        .icon-wrap {
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto 1.25rem;
+            border-radius: 999px;
+            background: linear-gradient(145deg, #eef3e8, #dce8d0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage-dark);
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            margin: 0 0 0.75rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .lead {
+            margin: 0 0 1rem;
+            font-size: 0.9375rem;
+            line-height: 1.65;
+            color: var(--muted);
+        }
+
+        .note {
+            margin: 0 0 1.5rem;
+            padding: 0.875rem 1rem;
+            border-radius: 0.75rem;
+            background: #f5f8f2;
+            border: 1px solid var(--border);
+            font-size: 0.8125rem;
+            line-height: 1.55;
+            color: var(--muted);
+            text-align: left;
+        }
+
+        .note strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 2.75rem;
+            padding: 0 1.25rem;
+            border-radius: 0.75rem;
+            border: none;
+            background: var(--sage);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        .btn:hover { background: var(--sage-dark); }
+
+        .footer {
+            padding: 1rem 1.5rem 1.5rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #8a8278;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .icon-wrap {
+                animation: pulse 2.4s ease-in-out infinite;
+            }
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); opacity: 1; }
+                50% { transform: scale(1.04); opacity: 0.92; }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="brand">Sencha House</div>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="icon-wrap" aria-hidden="true">&#9881;</div>
+            <h1>Website sedang dalam perbaikan</h1>
+            <p class="lead">
+                Portal rekrutmen Sencha untuk sementara tidak dapat diakses.
+                Tim kami sedang menyelesaikan pembaruan sistem.
+            </p>
+            <div class="note">
+                <strong>Untuk pelamar &amp; HRD:</strong> mohon coba lagi nanti.
+                Lamaran dan data Anda aman; halaman ini hanya sementara selama maintenance.
+            </div>
+            <button type="button" class="btn" onclick="location.reload()">Muat ulang halaman</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        &copy; <span id="year"></span> Sencha House &middot; Banyuwangi
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

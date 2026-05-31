@@ -1,0 +1,1 @@
+<section id="hrd-panel-detail" class="view-panel view-hidden max-w-4xl"><div id="hrd-detail-content"></div></section>

@@ -1,0 +1,21 @@
+{
+  "name": "sencha-recruitment",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sencha Recruitment — PHP + PostgreSQL (migrasi dari Firebase)",
+  "type": "module",
+  "scripts": {
+    "dev": "php -S 127.0.0.1:2022 -t . router.php",
+    "db:schema": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/init-db.ps1",
+    "migrate:html": "node scripts/migrate-html.js",
+    "import:firebase": "php scripts/import-firebase-json.php",
+    "start": "START.bat",
+    "stop": "STOP.bat",
+    "pm2:start": "pm2 start ecosystem.config.cjs --update-env",
+    "pm2:stop": "pm2 delete sencha-recruitment"
+  },
+  "devDependencies": {
+    "heic2any": "^0.0.4",
+    "pm2": "^5.4.3"
+  }
+}
