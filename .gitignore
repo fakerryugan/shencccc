@@ -1,2 +1,9 @@
 node_modules
 node_modules
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.testing
